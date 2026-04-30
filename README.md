@@ -4,21 +4,24 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-v0.2.0-green)](index.json)
-[![Skills](https://img.shields.io/badge/Skills-3-orange)](index.json)
+[![Skills](https://img.shields.io/badge/Skills-5-orange)](index.json)
 [![Provider](https://img.shields.io/badge/Provider-Wavect%20GmbH-black)](https://wavect.io)
 
 ---
 
 These are [Agent Skills](https://agentskills.io) — structured instruction files
 that give AI agents (Claude, Cursor, Copilot, and others) deep, opinionated
-expertise in specific domains. This collection focuses on the three decisions
-that most often determine whether a software product succeeds or dies:
+expertise in specific domains. This collection covers the decisions that most
+often determine whether a software product succeeds or dies — from idea
+validation to code quality to conversion.
 
 | Skill | What it does |
 |---|---|
 | [pmf-advisor](pmf-advisor/SKILL.md) | Validates ideas, prioritizes roadmaps, and assesses PMF using RICE, JTBD, Value Proposition Canvas, and the Sean Ellis Test |
 | [icp-discovery](icp-discovery/SKILL.md) | Destroys vague "anyone who..." ICPs through 6 stages of iterative questioning — behavioral, situational, economic, and channel profiling |
 | [pricing-strategy](pricing-strategy/SKILL.md) | Finds the right value metric, pricing model, and price point using Van Westendorp, WTP interviews, and tier structuring frameworks |
+| [qa-advisor](qa-advisor/SKILL.md) | Audits codebases across test quality, maintainability, security (OWASP Top 10), reliability, and DORA metrics — produces a structured QA Audit Report |
+| [website-icp-fit](website-icp-fit/SKILL.md) | Evaluates whether a website's copy, messaging hierarchy, and funnel structure are correctly aligned to convert the defined ICP |
 
 Built by [Wavect GmbH](https://wavect.io) — "More than Engineers. Build to Sell."
 
@@ -32,8 +35,8 @@ Built by [Wavect GmbH](https://wavect.io) — "More than Engineers. Build to Sel
 # Install a single skill for the current project
 cp -r pmf-advisor .claude/skills/
 
-# Or install all three
-for skill in pmf-advisor icp-discovery pricing-strategy; do
+# Or install all five
+for skill in pmf-advisor icp-discovery pricing-strategy qa-advisor website-icp-fit; do
   mkdir -p .claude/skills/$skill
   curl -sL https://raw.githubusercontent.com/wavect/ai-skills/main/$skill/SKILL.md \
     -o .claude/skills/$skill/SKILL.md
@@ -60,6 +63,8 @@ Point your agent at the raw GitHub URL:
 https://raw.githubusercontent.com/wavect/ai-skills/main/pmf-advisor/SKILL.md
 https://raw.githubusercontent.com/wavect/ai-skills/main/icp-discovery/SKILL.md
 https://raw.githubusercontent.com/wavect/ai-skills/main/pricing-strategy/SKILL.md
+https://raw.githubusercontent.com/wavect/ai-skills/main/qa-advisor/SKILL.md
+https://raw.githubusercontent.com/wavect/ai-skills/main/website-icp-fit/SKILL.md
 ```
 
 ---
@@ -125,6 +130,55 @@ then finds the right number — in that order. It never starts with the number.
 **Output:** Pricing Strategy Card — value metric, recommended model, price range, tier structure, upgrade trigger feature, biggest pricing risk, next experiment
 
 [View SKILL.md →](pricing-strategy/SKILL.md)
+
+---
+
+### QA Advisor
+
+> *"Coverage is vanity. Meaningful tests are sanity."*
+
+Most CI pipelines have a green badge and a codebase that will still fail in
+production. This skill audits five dimensions: test quality, maintainability,
+security, reliability/scalability, and delivery health — and it does not soften
+findings.
+
+**Frameworks included:**
+- Martin Fowler's test double taxonomy — dummy, stub, spy, mock, fake (and when each is correct)
+- London vs. Chicago school TDD — detecting accidental mixing and its consequences
+- OWASP Top 10 — IDOR, JWT `alg:none`, SSRF, mass assignment, timing attacks, and more
+- Property-based testing — invariants, round-trip, and oracle properties via fast-check / Hypothesis
+- Contract testing (Pact) — preventing silent API breakage in microservices
+- DORA metrics — deployment frequency, lead time, MTTR, and change failure rate as quality signals
+- Hexagonal architecture — detecting infrastructure entanglement that makes testing impossible
+- Load testing methodology — ramp, spike, soak, stress, breakpoint, and capacity patterns
+
+**Output:** QA Audit Report → Critical / High / Medium findings (file:line, specific remediation) → Test Quality Scorecard → Security Posture → DORA Assessment → Architectural Testability → Immediate Action → Three-Month Roadmap
+
+[View SKILL.md →](qa-advisor/SKILL.md)
+
+---
+
+### Website ICP Fit Auditor
+
+> *"Your homepage is not for everyone. If it tries to speak to everyone, it converts no one."*
+
+Traffic without conversions is a messaging problem, not a product problem. This
+skill evaluates a website — by URL or source code — against a defined Ideal
+Customer Profile. It refuses to produce recommendations without a specified ICP,
+because a homepage audit without an ICP is interior design critique.
+
+**Frameworks included:**
+- Eugene Schwartz's 5 Levels of Awareness — diagnosing the mismatch between traffic source and page message
+- StoryBrand SB7 — detecting when the company is positioned as the hero instead of the guide
+- April Dunford's Positioning — extracting (or exposing the absence of) a clear positioning statement
+- Cialdini's 7 Influence Principles — auditing social proof ICP match, authority signals, reciprocity offers
+- Fogg Behavior Model — identifying Ability failures (form length, hidden pricing, unclear CTA) over Motivation failures
+- The 4 U headline formula — Useful, Urgent, Unique, Ultra-specific applied to every H1
+- Funnel architecture — the correct scrolling sequence and what most homepages get wrong
+
+**Output:** ICP-Website Fit Audit Report → 5-Second Test → Critical / High / Medium findings → Messaging Scorecard → Psychological Triggers Audit → Funnel Structure → Trust Architecture → Pricing Page → Anti-Patterns → The One Change That Would Move Conversion Most → 90-Day Roadmap
+
+[View SKILL.md →](website-icp-fit/SKILL.md)
 
 ---
 
