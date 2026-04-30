@@ -28,6 +28,13 @@
       "description": "In-depth software QA audit skill for AI coding agents. Evaluates test quality (meaningful assertions, correct mocking, builder patterns, regression coverage), maintainability (DRY, SOLID, complexity), security (OWASP Top 10, secrets, injection), and reliability/scalability (error handling, N+1, timeouts, observability). Produces a structured QA Audit Report with severity-graded findings.",
       "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/qa-advisor/SKILL.md",
       "digest": "sha256:2f4c7c8d3cfcaeb66639243d924c646626601086df413ba315777b51253938f5"
+    },
+    {
+      "name": "website-icp-fit",
+      "type": "skill-md",
+      "description": "Website ICP-fit auditor. Evaluates a website (by URL or source code) against a defined Ideal Customer Profile to determine whether copy, messaging hierarchy, psychological triggers, funnel structure, and trust signals are correctly aligned to convert the right visitor. Applies Schwartz awareness levels, StoryBrand, Cialdini, Fogg Behavior Model, and April Dunford positioning. Outputs a structured conversion audit report.",
+      "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/website-icp-fit/SKILL.md",
+      "digest": "sha256:ab50d4c9b0020629e34c24ecabf04301d677ed4b68730314c06140ce5bd8143f"
     }
   ]
 }
