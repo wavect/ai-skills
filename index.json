@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "pmf-advisor",
+      "type": "skill-md",
+      "description": "Product-Market Fit advisor for founders and product managers. Applies RICE, JTBD, Value Proposition Canvas, and Sean Ellis Test frameworks to validate ideas and prioritize roadmaps. Aligned with Wavect's 'Build to Sell' philosophy.",
+      "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/pmf-advisor/SKILL.md",
+      "digest": "sha256:7ca083f08cf45c100506eebf2f88c2afa86c820ab9c57b394c6ba595667bc685"
+    },
+    {
+      "name": "icp-discovery",
+      "type": "skill-md",
+      "description": "Ideal Customer Profile discovery coach. Challenges vague ICP assumptions with iterative questions drawn from YC, Steve Blank, Rob Fitzpatrick, and April Dunford. Outputs a behavioral, situational, and economic ICP Card with the beachhead market and riskiest assumption to validate.",
+      "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/icp-discovery/SKILL.md",
+      "digest": "sha256:eccf16767905d7d6023d0bacc7825af74193ff90c762606cfc6f38016dea9db2"
+    },
+    {
+      "name": "pricing-strategy",
+      "type": "skill-md",
+      "description": "Pricing strategy coach for founders. Identifies the right value metric, pricing model (subscription, usage-based, tiered, freemium), and price point using Van Westendorp, WTP interviews, and frameworks from Patrick Campbell, Simon-Kucher, and YC. Outputs a Pricing Strategy Card.",
+      "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/pricing-strategy/SKILL.md",
+      "digest": "sha256:cf4b6eaaaf12188e0274836beddd813b5102f72f716f99c40228ba032341cff5"
+    }
+  ]
+}
