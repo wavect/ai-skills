@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-v0.2.0-green)](index.json)
-[![Skills](https://img.shields.io/badge/Skills-5-orange)](index.json)
+[![Skills](https://img.shields.io/badge/Skills-6-orange)](index.json)
 [![Provider](https://img.shields.io/badge/Provider-Wavect%20GmbH-black)](https://wavect.io)
 
 ---
@@ -22,6 +22,7 @@ validation to code quality to conversion.
 | [pricing-strategy](pricing-strategy/SKILL.md) | Finds the right value metric, pricing model, and price point using Van Westendorp, WTP interviews, and tier structuring frameworks |
 | [qa-advisor](qa-advisor/SKILL.md) | Audits codebases across test quality, maintainability, security (OWASP Top 10), reliability, and DORA metrics — produces a structured QA Audit Report |
 | [website-icp-fit](website-icp-fit/SKILL.md) | Evaluates whether a website's copy, messaging hierarchy, and funnel structure are correctly aligned to convert the defined ICP |
+| [high-ticket-conversion-architect](high-ticket-conversion-architect/SKILL.md) | Designs and audits landing pages for high-ticket services ($10k+) using Intent-Friction Ratio, Constructive Friction, Shadow Proof, and the 7 Messaging Blocks |
 
 Built by [Wavect GmbH](https://wavect.io) — "More than Engineers. Build to Sell."
 
@@ -35,8 +36,8 @@ Built by [Wavect GmbH](https://wavect.io) — "More than Engineers. Build to Sel
 # Install a single skill for the current project
 cp -r pmf-advisor .claude/skills/
 
-# Or install all five
-for skill in pmf-advisor icp-discovery pricing-strategy qa-advisor website-icp-fit; do
+# Or install all six
+for skill in pmf-advisor icp-discovery pricing-strategy qa-advisor website-icp-fit high-ticket-conversion-architect; do
   mkdir -p .claude/skills/$skill
   curl -sL https://raw.githubusercontent.com/wavect/ai-skills/main/$skill/SKILL.md \
     -o .claude/skills/$skill/SKILL.md
@@ -65,6 +66,7 @@ https://raw.githubusercontent.com/wavect/ai-skills/main/icp-discovery/SKILL.md
 https://raw.githubusercontent.com/wavect/ai-skills/main/pricing-strategy/SKILL.md
 https://raw.githubusercontent.com/wavect/ai-skills/main/qa-advisor/SKILL.md
 https://raw.githubusercontent.com/wavect/ai-skills/main/website-icp-fit/SKILL.md
+https://raw.githubusercontent.com/wavect/ai-skills/main/high-ticket-conversion-architect/SKILL.md
 ```
 
 ---
@@ -179,6 +181,32 @@ because a homepage audit without an ICP is interior design critique.
 **Output:** ICP-Website Fit Audit Report → 5-Second Test → Critical / High / Medium findings → Messaging Scorecard → Psychological Triggers Audit → Funnel Structure → Trust Architecture → Pricing Page → Anti-Patterns → The One Change That Would Move Conversion Most → 90-Day Roadmap
 
 [View SKILL.md →](website-icp-fit/SKILL.md)
+
+---
+
+### High-Ticket Conversion Architect
+
+> *"Volume-based optimization is for $99 products. At $10k+, you are not optimizing clicks — you are bridging a trust gap."*
+
+For premium B2B and luxury service offers above $10,000, conventional
+landing-page best practices invert. Lower friction reduces conversion.
+Generic social proof reduces conversion. "Book a Call" reduces conversion.
+This skill designs and audits high-ticket pages on the principles of
+Relationship Selling, Risk Reversal, and Selective Enrollment — engineering
+the page so the right buyer self-qualifies and the wrong buyer self-disqualifies.
+
+**Frameworks included:**
+- Intent-Friction Ratio — when to add Constructive Friction and when to remove Maladaptive Friction
+- The 7 Messaging Blocks — Headline, Context, Mechanism, Proof, Selective Enrollment, CTA, Ethics
+- Proof of Work + Shadow Proof — uncomfortably specific operational detail that fraudsters cannot fabricate
+- Selective Enrollment / Disqualification — repelling wrong-fit buyers as a conversion lever
+- The ROI Bridge, Decision Frameworks, Response Velocity Signals
+- Confidently Boring aesthetic, Von Restorff Effect, Decoy Effect, Ben Franklin Effect, Loss Aversion framing
+- Traffic-temperature calibration (Cold / Warm / Hot) to dictate persuasion length
+
+**Output:** High-Ticket Landing Page Architecture → Intent-Friction Assessment → 7 Messaging Blocks (with copy and proof) → Specialized Modules → Psychological Heuristics → Aesthetic Direction → The One Change That Would Convert Most → 90-Day Deployment Roadmap
+
+[View SKILL.md →](high-ticket-conversion-architect/SKILL.md)
 
 ---
 

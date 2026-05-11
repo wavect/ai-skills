@@ -35,6 +35,13 @@
       "description": "Website ICP-fit auditor. Evaluates a website (by URL or source code) against a defined Ideal Customer Profile to determine whether copy, messaging hierarchy, psychological triggers, funnel structure, and trust signals are correctly aligned to convert the right visitor. Applies Schwartz awareness levels, StoryBrand, Cialdini, Fogg Behavior Model, and April Dunford positioning. Outputs a structured conversion audit report.",
       "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/website-icp-fit/SKILL.md",
       "digest": "sha256:ab50d4c9b0020629e34c24ecabf04301d677ed4b68730314c06140ce5bd8143f"
+    },
+    {
+      "name": "high-ticket-conversion-architect",
+      "type": "skill-md",
+      "description": "Senior expert for designing, writing, and auditing landing pages for high-ticket services ($10k+). Applies the Intent-Friction Ratio, Constructive Friction, Selective Enrollment models, and 'Proof of Work' architecture to bridge trust gaps for risk-averse buyers. Outputs a complete 7-block wireframe with copy, mechanism, shadow proof, disqualification, and ethics sections.",
+      "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/high-ticket-conversion-architect/SKILL.md",
+      "digest": "sha256:f86ae6aac035531f1e7004ace80231323d0d50009c863cd88c9505499bc51acb"
     }
   ]
 }
