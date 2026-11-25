@@ -4,44 +4,44 @@
     {
       "name": "pmf-advisor",
       "type": "skill-md",
-      "description": "Product-Market Fit advisor for founders and product managers. Applies RICE, JTBD, Value Proposition Canvas, and Sean Ellis Test frameworks to validate ideas and prioritize roadmaps. Aligned with Wavect's 'Build to Sell' philosophy.",
+      "description": "Assess product-market fit or choose a validation experiment when a founder has an idea, early traction, cohort data, survey responses, or a roadmap decision.",
       "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/pmf-advisor/SKILL.md",
-      "digest": "sha256:b506968dd00605809b8bcba0fc566167f9c4451359a75da884360153cf45fc89"
+      "digest": "sha256:76627664214a29d161dcfb561e4f367c95b85d165439c6c63b68824689caa9a8"
     },
     {
       "name": "icp-discovery",
       "type": "skill-md",
-      "description": "Ideal Customer Profile discovery coach. Challenges vague ICP assumptions with iterative questions drawn from YC, Steve Blank, Rob Fitzpatrick, and April Dunford. Outputs a behavioral, situational, and economic ICP Card with the beachhead market and riskiest assumption to validate.",
+      "description": "Define or narrow an ideal customer profile from wins, losses, churn, or switch interviews. Use when choosing a beachhead segment, buying trigger, or channel to test.",
       "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/icp-discovery/SKILL.md",
-      "digest": "sha256:a45a4cb02aae96d909eca59547788efdfa7c7aca48acf2c7117880a839f3180a"
+      "digest": "sha256:c309e4c929033d4ba7fda6a0e54095d2a92f0bcf2ce78f8b448ff740a7dc7e69"
     },
     {
       "name": "pricing-strategy",
       "type": "skill-md",
-      "description": "Pricing strategy coach for founders. Identifies the right value metric, pricing model (subscription, usage-based, tiered, freemium), and price point using Van Westendorp, WTP interviews, and frameworks from Patrick Campbell, Simon-Kucher, and YC. Outputs a Pricing Strategy Card.",
+      "description": "Choose a value metric, packaging or price experiment for a product or service using deal evidence, customer alternatives, delivery costs and willingness-to-pay research.",
       "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/pricing-strategy/SKILL.md",
-      "digest": "sha256:993ac50106f565eafcd0818b2bd4f5f862c95da613d62ae599d7c4aa67775f86"
+      "digest": "sha256:4d93b3ccf3497b33e6fa0a6f0499e96752bb86781d90e844b605cfe76fc25dfe"
     },
     {
       "name": "qa-advisor",
       "type": "skill-md",
-      "description": "In-depth software QA audit skill for AI coding agents. Evaluates test quality (meaningful assertions, correct mocking, builder patterns, regression coverage), maintainability (DRY, SOLID, complexity), security (OWASP Top 10, secrets, injection), and reliability/scalability (error handling, N+1, timeouts, observability). Produces a structured QA Audit Report with severity-graded findings.",
+      "description": "Review a code change, test suite or release for evidence-backed software quality risks. Use for regression coverage, reliability, defensive code review or delivery measurement.",
       "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/qa-advisor/SKILL.md",
-      "digest": "sha256:2f4c7c8d3cfcaeb66639243d924c646626601086df413ba315777b51253938f5"
+      "digest": "sha256:6c89ce0e9d827c97b084b8a664b8ff5e0d56f148e62930bc4c8586c76e388c9f"
     },
     {
       "name": "website-icp-fit",
       "type": "skill-md",
-      "description": "Website ICP-fit auditor. Evaluates a website (by URL or source code) against a defined Ideal Customer Profile to determine whether copy, messaging hierarchy, psychological triggers, funnel structure, and trust signals are correctly aligned to convert the right visitor. Applies Schwartz awareness levels, StoryBrand, Cialdini, Fogg Behavior Model, and April Dunford positioning. Outputs a structured conversion audit report.",
+      "description": "Audit an existing homepage, landing page or pricing page against a specific buyer, traffic source and intended action. Use for messaging, proof or conversion friction on supplied pages.",
       "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/website-icp-fit/SKILL.md",
-      "digest": "sha256:ab50d4c9b0020629e34c24ecabf04301d677ed4b68730314c06140ce5bd8143f"
+      "digest": "sha256:94ed981568b38283f9fbd13af177b5ec117d6a17bc5148112782b973493a2375"
     },
     {
       "name": "high-ticket-conversion-architect",
       "type": "skill-md",
-      "description": "Senior expert for designing, writing, and auditing landing pages for high-ticket services ($10k+). Applies the Intent-Friction Ratio, Constructive Friction, Selective Enrollment models, and 'Proof of Work' architecture to bridge trust gaps for risk-averse buyers. Outputs a complete 7-block wireframe with copy, mechanism, shadow proof, disqualification, and ethics sections.",
+      "description": "Draft or revise a high-ticket service landing page when buyers need to understand scope, proof, price and qualification before a sales conversation. Produces a seven-block wireframe or a targeted rewrite.",
       "url": "https://raw.githubusercontent.com/wavect/ai-skills/main/high-ticket-conversion-architect/SKILL.md",
-      "digest": "sha256:f86ae6aac035531f1e7004ace80231323d0d50009c863cd88c9505499bc51acb"
+      "digest": "sha256:9426a6990aa31752c6c414935d631f2117703e28fadb221e504f0ea37a8ed255"
     }
   ]
 }

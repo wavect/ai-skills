@@ -1,69 +1,26 @@
 # Contributing to Wavect AI Skills
 
-Thank you for your interest. This repository contains open-source AI agent
-skills published by Wavect GmbH. Contributions that improve the quality,
-accuracy, or breadth of the skills are welcome.
+Start with a decision an agent got wrong, a missing input that changed its advice, or a method whose source has changed. Put the skill's purpose and activation conditions in the frontmatter description. Keep the workflow and a worked example in `SKILL.md`. Put optional methods in `reference/` and link them relative to the entry point. This path also serves existing website links. [Agent Skills specification](https://agentskills.io/specification) · [Skill authoring practices](https://agentskills.io/skill-creation/best-practices)
 
-## What makes a good contribution
+Use a neighboring skill as a frontmatter example. Keep the directory and skill name identical. Use standard top-level fields and place Wavect's version, schema, provider and contact under `metadata` as strings. Increment the version when the published instructions change.
 
-- **Corrections**: frameworks cited incorrectly, outdated advice, broken links
-- **Improvements**: sharper questions, better anti-patterns, clearer output templates
-- **New skills**: additional product/go-to-market skills in the same spirit
-  (founder-focused, framework-grounded, direct, actionable)
+## Check a change
 
-## What does not belong here
+Run these commands from the repository root with Python 3 and PyYAML installed. Add a catalogue row to `index.json` for a new skill. The script fills in its description, raw URL and digest.
 
-- Promotional content or advertising
-- Skills outside the product strategy / go-to-market domain
-- Vague or generic advice that could appear in any business blog
-
-## Skill format
-
-Each skill lives in its own directory:
-
-```
-skill-name/
-└── SKILL.md
+```sh
+python3 scripts/registry.py
+python3 scripts/registry.py --check
 ```
 
-`SKILL.md` must include a YAML frontmatter block at the top:
+Use the relevant scenario in the evaluation set with a fresh agent. Give it only the prompt, skill and supplied inputs. Review the result against the decision criteria. Include the observed behavior and any correction in the pull request. [Behavioral checks](evals/scenarios.md)
 
-```yaml
----
-schema: skill-md/1.0
-name: skill-name
-version: 1.0.0
-provider: Your Name or Org
-contact: your@email.com
----
+## Publish the website copy
+
+Copy the six published skill directories into `themes/raditiy/static/.well-known/agent-skills/` in the Wavect homepage checkout. Synchronize the affected directory only when updating one skill. In that checkout, update the affected skill descriptions and example prompts in the four localized `pages.yml` files and run `npm run generate:agent-skills`. Follow the homepage's discovery and rendered verification guide.
+
+From this repository, compare the checked-out copies before opening the two pull requests.
+
+```sh
+python3 scripts/registry.py --check --site-root /path/to/Wavect_Tech_Homepage
 ```
-
-Recommended sections: Purpose, When to Activate, Frameworks / Question Framework,
-Output template, Anti-Patterns, Progression Logic (by stage).
-
-## Updating index.json
-
-After adding or editing a `SKILL.md`, regenerate its SHA-256 digest and update
-`index.json`:
-
-```bash
-shasum -a 256 skill-name/SKILL.md
-```
-
-Update the corresponding `digest` field in `index.json` with the result prefixed
-by `sha256:`.
-
-## Pull request process
-
-1. Fork the repository
-2. Create a branch: `git checkout -b skill/your-skill-name`
-3. Add or edit the `SKILL.md` file
-4. Update `index.json` with the correct digest
-5. Open a pull request with a short description of what changed and why
-
-All PRs are reviewed by the Wavect team. We may suggest edits for tone,
-accuracy, or alignment with the existing skill style before merging.
-
-## Questions
-
-Open an issue or email office@wavect.io.
